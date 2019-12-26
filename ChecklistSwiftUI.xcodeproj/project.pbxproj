@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		BAE4C88723B477C5004377C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C88623B477C5004377C7 /* AppDelegate.swift */; };
 		BAE4C88923B477C5004377C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C88823B477C5004377C7 /* SceneDelegate.swift */; };
-		BAE4C88B23B477C5004377C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C88A23B477C5004377C7 /* ContentView.swift */; };
+		BAE4C88B23B477C5004377C7 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C88A23B477C5004377C7 /* ChecklistView.swift */; };
 		BAE4C88D23B477C9004377C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE4C88C23B477C9004377C7 /* Assets.xcassets */; };
 		BAE4C89023B477C9004377C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE4C88F23B477C9004377C7 /* Preview Assets.xcassets */; };
 		BAE4C89323B477C9004377C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE4C89123B477C9004377C7 /* LaunchScreen.storyboard */; };
 		BAE4C89C23B4B094004377C7 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C89B23B4B094004377C7 /* ChecklistItem.swift */; };
+		BAE4C89F23B4C33E004377C7 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C89E23B4C33E004377C7 /* ChecklistViewModel.swift */; };
+		BAE4C8A223B4CE1B004377C7 /* EditChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C8A123B4CE1B004377C7 /* EditChecklistItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BAE4C88323B477C5004377C7 /* ChecklistSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChecklistSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE4C88623B477C5004377C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE4C88823B477C5004377C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAE4C88A23B477C5004377C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BAE4C88A23B477C5004377C7 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
 		BAE4C88C23B477C9004377C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE4C88F23B477C9004377C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BAE4C89223B477C9004377C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE4C89423B477C9004377C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE4C89B23B4B094004377C7 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		BAE4C89E23B4C33E004377C7 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
+		BAE4C8A123B4CE1B004377C7 /* EditChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				BAE4C89A23B4B08A004377C7 /* Models */,
+				BAE4C8A023B4C382004377C7 /* Views */,
+				BAE4C89D23B4C325004377C7 /* ViewModel */,
 				BAE4C88623B477C5004377C7 /* AppDelegate.swift */,
 				BAE4C88823B477C5004377C7 /* SceneDelegate.swift */,
-				BAE4C88A23B477C5004377C7 /* ContentView.swift */,
 				BAE4C88C23B477C9004377C7 /* Assets.xcassets */,
 				BAE4C89123B477C9004377C7 /* LaunchScreen.storyboard */,
 				BAE4C89423B477C9004377C7 /* Info.plist */,
@@ -84,6 +89,23 @@
 				BAE4C89B23B4B094004377C7 /* ChecklistItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BAE4C89D23B4C325004377C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BAE4C89E23B4C33E004377C7 /* ChecklistViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BAE4C8A023B4C382004377C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAE4C88A23B477C5004377C7 /* ChecklistView.swift */,
+				BAE4C8A123B4CE1B004377C7 /* EditChecklistItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +181,10 @@
 			files = (
 				BAE4C88723B477C5004377C7 /* AppDelegate.swift in Sources */,
 				BAE4C88923B477C5004377C7 /* SceneDelegate.swift in Sources */,
-				BAE4C88B23B477C5004377C7 /* ContentView.swift in Sources */,
+				BAE4C88B23B477C5004377C7 /* ChecklistView.swift in Sources */,
 				BAE4C89C23B4B094004377C7 /* ChecklistItem.swift in Sources */,
+				BAE4C8A223B4CE1B004377C7 /* EditChecklistItemView.swift in Sources */,
+				BAE4C89F23B4C33E004377C7 /* ChecklistViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
