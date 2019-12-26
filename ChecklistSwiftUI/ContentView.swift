@@ -10,24 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var checklistItems = [
-        "Take vocal lessons",
-        "Record hit single",
-        "Learn every martial art",
-        "Design costume",
-        "Design crime-fighting vehicle",
-        "Come up with superhero name",
-        "Befriend space raccoon",
-        "Save the world",
-        "Star in blockbuster movie"
+    @State var checklistItems: [ChecklistItem] = [
+        ChecklistItem(name: "Walk the dog"),
+        ChecklistItem(name: "Brush my teeth"),
+        ChecklistItem(name: "Learn iOS development", isChecked: true),
+        ChecklistItem(name: "Soccer practice"),
+        ChecklistItem(name: "Eat ice cream", isChecked: true)
     ]
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(checklistItems, id: \.self) { item in
-                    Text(item).onTapGesture {
-                        self.checklistItems.remove(at: 0)
+                ForEach(checklistItems) { checklistItem in
+                    HStack {
+                        Text(checklistItem.name)
+                        Spacer()
+                        Text(checklistItem.isChecked ? "✅" : "🔲")
+                    }
+                    .background(Color.white) // makes the whole row clickable
+                    .onTapGesture {
+                        self.checkUncheckItem(with: checklistItem.id)
                     }
                 }
                 .onDelete(perform: deleteListItem)
@@ -35,6 +37,14 @@ struct ContentView: View {
             }
             .navigationBarTitle("Checklist")
             .navigationBarItems(trailing: EditButton())
+        }
+    }
+    
+    private func checkUncheckItem(with itemID: UUID) {
+        if let tappedIndex = self.checklistItems.firstIndex(where: {
+            $0.id == itemID
+        }) {
+            self.checklistItems[tappedIndex].isChecked.toggle()
         }
     }
     

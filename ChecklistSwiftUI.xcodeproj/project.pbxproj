@@ -13,6 +13,7 @@
 		BAE4C88D23B477C9004377C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE4C88C23B477C9004377C7 /* Assets.xcassets */; };
 		BAE4C89023B477C9004377C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE4C88F23B477C9004377C7 /* Preview Assets.xcassets */; };
 		BAE4C89323B477C9004377C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE4C89123B477C9004377C7 /* LaunchScreen.storyboard */; };
+		BAE4C89C23B4B094004377C7 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4C89B23B4B094004377C7 /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BAE4C88F23B477C9004377C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BAE4C89223B477C9004377C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE4C89423B477C9004377C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE4C89B23B4B094004377C7 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		BAE4C88523B477C5004377C7 /* ChecklistSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BAE4C89A23B4B08A004377C7 /* Models */,
 				BAE4C88623B477C5004377C7 /* AppDelegate.swift */,
 				BAE4C88823B477C5004377C7 /* SceneDelegate.swift */,
 				BAE4C88A23B477C5004377C7 /* ContentView.swift */,
@@ -73,6 +76,14 @@
 				BAE4C88F23B477C9004377C7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAE4C89A23B4B08A004377C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAE4C89B23B4B094004377C7 /* ChecklistItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 				BAE4C88723B477C5004377C7 /* AppDelegate.swift in Sources */,
 				BAE4C88923B477C5004377C7 /* SceneDelegate.swift in Sources */,
 				BAE4C88B23B477C5004377C7 /* ContentView.swift in Sources */,
+				BAE4C89C23B4B094004377C7 /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
