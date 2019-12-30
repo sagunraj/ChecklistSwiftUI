@@ -36,6 +36,8 @@ struct ChecklistView: View {
             ).sheet(isPresented: $newChecklistItemViewIsVisible) {
                 NewChecklistItemView(checklistViewModel: self.checklistViewModel)
             }
+        }.onAppear {
+            self.checklistViewModel.saveListItems()
         }
     }
     
