@@ -17,16 +17,8 @@ struct ChecklistView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(checklistViewModel.checklistItems) { checklistItem in
-                    HStack {
-                        Text(checklistItem.name)
-                        Spacer()
-                        Text(checklistItem.isChecked ? "✅" : "🔲")
-                    }
-                        .background(Color.white) // makes the whole row clickable
-                        .onTapGesture {
-                            self.checklistViewModel.checkUncheckItem(with: checklistItem.id)
-                    }
+                ForEach(checklistViewModel.checklistItems) { index in
+                    RowView(checklistItem: self.$checklistViewModel.checklistItems[index])
                 }
                 .onDelete(perform: checklistViewModel.deleteListItem)
                 .onMove(perform: checklistViewModel.moveListItem)
